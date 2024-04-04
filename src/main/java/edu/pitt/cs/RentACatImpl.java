@@ -18,21 +18,8 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public boolean returnCat(int id) {
-		Cat cat = getCat(id);
-
-    // Return FALSE if cat ID does not exist or if the cat is not rented
-	  if(cat == null) {
-      return false;
-    }
-    if (!cat.getRented()) {
-      System.out.println(cat.getName() + " is already here!");
-      return false;
-    } 
-
-    // Rent the cat
-    cat.returnCat();
-    System.out.println("Welcome back, " + cat.getName() + "!");
-		return true;
+		// TODO: Fill in
+		return false;
 	}
 
 	/**
@@ -46,21 +33,8 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public boolean rentCat(int id) {
-		Cat cat = getCat(id);
-
-    // Return FALSE if cat ID does not exist or if the cat is already rented
-    if (cat == null) {
-      return false;
-    }
-    if (cat.getRented()) {
-      System.out.println("Sorry, " + cat.getName() + " is not here!");
-      return false;
-    }
-
-    // Rent the cat
-    cat.rentCat();
-    System.out.println(cat.getName() + " has been rented.");
-		return true;
+		// TODO: Fill in
+		return false;
 	}
 
 	/**
@@ -73,20 +47,9 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public boolean renameCat(int id, String name) {
-		Cat cat = getCat(id);
-
-		if(cat == null) return false; 
-	
-		if(!cat.getRented()) {
-			cat.renameCat(name);
-      System.out.println("Hello, " + cat.getName() + "!");
-		} else {
-		  System.out.println("Sorry, " + cat.getName() + " is not here!");
-          return false;
-		}
-    return true;
+		// TODO: Fill in
+		return false;
 	}
-
 
 	/**
 	 * Create a String list from the list of cats using the .toString() method of
@@ -99,16 +62,8 @@ public class RentACatImpl implements RentACat {
 	 */
 
 	public String listCats() {
-    StringBuilder result = new StringBuilder();
-    
-    for(Cat cat : cats) {
-      // Check if cat is available (not rented)
-      if (!cat.getRented()) {
-        // Cat isn't rented yet - output it
-        result.append("ID ").append(cat.getId() + ". ").append(cat.getName() + "\n");
-      }
-    }
-		return result.toString();
+		// TODO: Fill in
+		return "WRITE CODE FOR THIS";
 	}
 
 	/**
